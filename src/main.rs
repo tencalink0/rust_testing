@@ -9,8 +9,8 @@ fn main() {
     let _x: f32 = 5 as f32 /3 as f32;
     
     let _tup: (i32, f64) = (500, 9.8);
-    let mut _arr: [i8; 3] = Default::default();
-    arr[0] = 9 as i16; 
+    let mut arr: [i8; 3] = Default::default();
+    arr[0] = 9 as i8; 
 
     let a = [1, 2, 3, 4, 5];
     println!("Enter your index");   
@@ -24,13 +24,13 @@ fn main() {
             .read_line(&mut index)
             .expect("Failed to read line!");
 
-        let index: usize = match index.trim().parse() {
-            Ok(num) => num,
+        let index: u32 = match index.trim().parse() {
+            Ok(num) => {break num},
             Err(_) => {
                 println!("Please type a number");
                 continue;
             },
-        }
+        };
     }   
     
     let element = a[index];
