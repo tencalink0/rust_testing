@@ -14,7 +14,7 @@ fn main() {
 
     let a = [1, 2, 3, 4, 5];
     println!("Enter your index");   
-
+    
     let mut index: usize;
 
     loop {
@@ -25,7 +25,10 @@ fn main() {
             .expect("Failed to read line!");
 
         let index: u32 = match index.trim().parse() {
-            Ok(num) => {break num},
+            Ok(num) => {
+                index = num; 
+                break;
+            },
             Err(_) => {
                 println!("Please type a number");
                 continue;
