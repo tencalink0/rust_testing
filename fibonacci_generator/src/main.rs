@@ -12,6 +12,9 @@ fn fibonacci(limit: u32) -> usize{
 }
 
 fn main() {
+    struct Verb {
+        
+    }
     println!("How many iterations of the fibonacci sequence should be performed?");
 
     let mut user_input = String::new();
